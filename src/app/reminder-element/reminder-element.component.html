@@ -1,1 +1,11 @@
-<mat-card>{{reminderElement.reminderText}}</mat-card>
+<mat-card>
+  <mat-card-subtitle>{{reminderElement.reminderText}}</mat-card-subtitle>
+  <mat-card-content>
+    <p>Created: {{reminderElement.createdDate}}, Due: {{reminderElement.dueDate}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Done</button>
+    <button mat-button>Edit</button>
+  </mat-card-actions>
+</mat-card>
+
