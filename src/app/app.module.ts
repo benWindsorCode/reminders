@@ -8,9 +8,12 @@ import {
   MatListModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatGridListModule,
+  MatCheckboxModule
 } from "@angular/material";
 import { ReminderContainerComponent } from './reminder-container/reminder-container.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
@@ -23,10 +26,13 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

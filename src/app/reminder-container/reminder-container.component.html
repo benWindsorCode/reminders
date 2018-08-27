@@ -1,3 +1,11 @@
 <div *ngFor="let reminderSource of reminderSources">
   <app-reminder-element [reminderElement]="reminderSource._source"></app-reminder-element>
 </div>
+<div layout="row">
+  <div flex>First item in row</div>
+  <div flex>Second item in row</div>
+</div>
+<div layout="column">
+  <div flex>First item in column</div>
+  <div flex>Second item in column</div>
+</div>
