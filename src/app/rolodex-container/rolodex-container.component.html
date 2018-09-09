@@ -1,0 +1,14 @@
+<div>
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Username">
+  </mat-form-field>
+  &nbsp;
+  <button mat-raised-button color="primary">Search</button>
+</form>
+</div>
+<div>
+  <div *ngFor="let rolodexSource of rolodexSources">
+    <app-rolodex-element [rolodexElement]="rolodexSource._source"></app-rolodex-element>
+  </div>
+</div>

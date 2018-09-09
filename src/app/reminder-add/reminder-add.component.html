@@ -1,3 +1,13 @@
-<p>
-  reminder-add works!
-</p>
+<mat-card class="element">
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="New reminder:">
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field>
+    <input matInput type="datetime-local" placeholder="Due">
+  </mat-form-field>
+  &nbsp;
+  <button mat-raised-button color="primary" type="submit">Create</button>
+</form>
+</mat-card>

@@ -9,14 +9,23 @@
   <!--</mat-card-actions>-->
 <!--</mat-card>-->
 
-<mat-card xmlns:left="http://www.w3.org/1999/xhtml">
-<mat-grid-list cols="12" rowHeight="100px">
+<mat-card class="element" xmlns:left="http://www.w3.org/1999/xhtml">
+<mat-grid-list cols="12" rowHeight="40px">
   <mat-grid-tile [colspan]="10" [rowspan]="1">
-    <div style="position: absolute; left: 5px">
-    {{reminderElement.reminderText}}
+    <div style="position: absolute; left: 5px; top: 20px">
+      {{reminderElement.reminderText}}
     </div>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="2" [rowspan]="1"><mat-checkbox></mat-checkbox></mat-grid-tile>
 </mat-grid-list>
+
+  <mat-grid-list cols="12" rowHeight="40px">
+    <mat-grid-tile [colspan]="10" [rowspan]="1">
+      <div style="position: absolute; left: 5px">
+        <b>Created</b>: {{reminderElement.createdDate | date: 'medium'}}, <b>Due</b>: {{reminderElement.dueDate | date: 'medium'}}
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </mat-card>
 <br />

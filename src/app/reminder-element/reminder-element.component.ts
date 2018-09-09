@@ -15,6 +15,4 @@ export class ReminderElementComponent implements OnInit {
   ngOnInit() {
   }
 
-  reminderText = "This is some reminder text"
-
 }

@@ -1,0 +1,8 @@
+a {
+  color: beige;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7280d0;
+}

@@ -15,6 +15,20 @@ export class ElasticsearchService {
     }
   };
 
+  private queryAllRolodexByAuthor = (firstName, lastName) => {
+    return {
+      'query': {
+        'bool': {
+          'must': [
+            {'match': {'type': 'entry'}},
+            {'match': {'author.firstName': firstName}},
+            {'match': {'author.lastName': lastName}}
+          ]
+        }
+      }
+    }
+  }
+
   constructor() {
     if(!this.client) {
       this.connect();
@@ -42,6 +56,19 @@ export class ElasticsearchService {
       body: this.queryAllDocs,
       filterPath: ['hits.hits._source']
     })
+  }
+
+  getAllRolodexByAuthor(_index, _type, author): any {
+    return this.client.search({
+      index: _index,
+      type: _type,
+      body: this.queryAllRolodexByAuthor(author.firstName, author.lastName),
+      filterPath: ['hits.hits._source']
+    })
+  }
+
+  addToIndex(value): any {
+    return this.client.create(value);
   }
 
 }
